@@ -3,8 +3,12 @@ public class Movie {
     int releaseDate;
     int durationMinutes;
     String includedPlan;
-    double sumOfEvaluations;
-    int totalEvaluations;
+    private double sumOfEvaluations;
+    private int totalEvaluations;
+
+    int getTotalEvaluations(){
+        return totalEvaluations;
+    }
 
     void showTechnicalSheet () {
         System.out.println("El nombre de la  película es: " + name);
