@@ -40,7 +40,7 @@ public class Title {
         return includedPlan;
     }
 
-    int getTotalEvaluations(){
+    int getTotalEvaluations() {
         return totalEvaluations;
     }
 
@@ -49,11 +49,13 @@ public class Title {
         System.out.println("Su fecha de lanzamiento es: " + releaseDate);
         System.out.println("Duración en minutos: " + durationMinutes);
     }
-    public void assess(double note){
+
+    public void assess(double note) {
         sumOfEvaluations += note;
         totalEvaluations++;
     }
-    public double calculateAverage(){
+
+    public double calculateAverage() {
         return sumOfEvaluations / totalEvaluations;
     }
 }
