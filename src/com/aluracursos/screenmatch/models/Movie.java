@@ -1,6 +1,7 @@
 package com.aluracursos.screenmatch.models;
 
 public class Movie extends Title {
+    private String director;
     public String getDirector() {
         return director;
     }
@@ -9,5 +10,5 @@ public class Movie extends Title {
         this.director = director;
     }
 
-    private String director;
+
 }

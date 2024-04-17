@@ -1,4 +1,6 @@
+import com.aluracursos.screenmatch.calculos.TimeCalculator;
 import com.aluracursos.screenmatch.models.Movie;
+import com.aluracursos.screenmatch.models.Series;
 
 public class Principal {
     public static void main(String[] args) {
@@ -15,11 +17,25 @@ public class Principal {
 
         System.out.println("Média de evaluaciones de la película: " +myMovie.calculateAverage());
 
-//        com.aluracursos.screenmatch.models.Movie otherMovie = new com.aluracursos.screenmatch.models.Movie();
-//        otherMovie.name= "Matrix";
-//        otherMovie.releaseDate = 1998;
-//        otherMovie.durationMinutes = 180;
+        Movie otherMovie = new Movie();
+        otherMovie.setName("Matrix");
+        otherMovie.setReleaseDate(1998);
+        otherMovie.setDurationMinutes(180);
 
+        Series mySeries = new Series();
+        mySeries.setName("Casa del dragón");
+        mySeries.setReleaseDate(2022);
+        mySeries.setSeason(1);
+        mySeries.setMinutesEpisode(50);
+        mySeries.setEpisodesSeason(10);
+        mySeries.showTechnicalSheet();
+        System.out.println(mySeries.getDurationMinutes());
+
+        TimeCalculator calculator =new TimeCalculator();
+        calculator.includes(myMovie);
+        calculator.includes(otherMovie);
+        calculator.includes(mySeries);
+        System.out.println("Tiempo necesario para ver tus titulos favoritos estas vaciones "+ calculator.getTotalTime() + " minutos");
 
     }
 }
