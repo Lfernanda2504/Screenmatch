@@ -48,8 +48,6 @@ public class Title {
         System.out.println("El nombre de la  película es: " + name);
         System.out.println("Su fecha de lanzamiento es: " + releaseDate);
         System.out.println("Duración en minutos: " + getDurationMinutes());
-        System.out.println("Duración en minutos: " + durationMinutes);
-
     }
     public void assess(double note){
         sumOfEvaluations += note;
