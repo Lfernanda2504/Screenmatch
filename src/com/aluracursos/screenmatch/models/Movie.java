@@ -1,6 +1,8 @@
 package com.aluracursos.screenmatch.models;
 
-public class Movie extends Title {
+import com.aluracursos.screenmatch.calculos.Classification;
+
+public class Movie extends Title implements Classification {
     private String director;
     public String getDirector() {
         return director;
@@ -11,4 +13,8 @@ public class Movie extends Title {
     }
 
 
+    @Override
+    public int getClassification() {
+        return (int) (calculateAverage()/2);
+    }
 }
