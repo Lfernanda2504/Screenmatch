@@ -1,9 +1,20 @@
 package com.aluracursos.screenmatch.models;
 
-public class Episodes {
+import com.aluracursos.screenmatch.calculos.Classification;
+
+public class Episode implements Classification {
     private int number;
     private String name;
     private Series series;
+    private int totalViews;
+
+    public int getTotalViews() {
+        return totalViews;
+    }
+
+    public void setTotalViews(int totalViews) {
+        this.totalViews = totalViews;
+    }
 
     public int getNumber() {
         return number;
@@ -27,5 +38,14 @@ public class Episodes {
 
     public void setSeries(Series series) {
         this.series = series;
+    }
+
+    @Override
+    public int getClassification() {
+        if(totalViews >100){
+            return 4;
+        }else {
+            return 2;
+        }
     }
 }

@@ -8,6 +8,11 @@ public class Title {
     private double sumOfEvaluations;
     private int totalEvaluations;
 
+    public Title(String name, int releaseDate) {
+        this.name = name;
+        this.releaseDate = releaseDate;
+    }
+
     public void setReleaseDate(int releaseDate) {
         this.releaseDate = releaseDate;
     }
