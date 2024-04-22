@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.principal;
+
 import com.aluracursos.screenmatch.calculos.FilterRecommendations;
 import com.aluracursos.screenmatch.calculos.TimeCalculator;
 import com.aluracursos.screenmatch.models.Episode;
@@ -66,8 +68,8 @@ public class Principal {
 
 //        Movie[] peliculas= new Movie[2];
 //
-//        Movie movie1 = new Movie("Avatar", 2009);
-//        Movie movie2 = new Movie("El señor de los anillos", 2001);
+          Movie movie1 = new Movie("Avatar", 2009);
+          Movie movie2 = new Movie("El señor de los anillos", 2001);
 //
 //        peliculas[0] = movie1;
 //        peliculas[1] = movie2;
